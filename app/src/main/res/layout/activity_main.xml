@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <Button
+
+        android:id="@+id/btn_login"
+        android:layout_width="141dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/btn_background"
+        android:fontFamily="@font/bentonsans_bold"
+        android:text="@string/Button"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView_forgot"
+        app:layout_constraintStart_toStartOf="@+id/textView_forgot" />
+
+    <TextView
+        android:id="@+id/textView_forgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:fontFamily="@font/bentonsans_medium"
+        android:text="@string/TextForgot"
+        android:textColor="#53E88B"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_google"
+        app:layout_constraintStart_toStartOf="@+id/btn_facebook" />
+
+    <Button
+        android:id="@+id/btn_facebook"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/facegooglebtn_background"
+        android:drawableStart="@drawable/facebook_icon"
+        android:drawablePadding="13dp"
+        android:fontFamily="@font/bentonsans_medium"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:text="@string/Textfacebook"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textView_forgot"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_google"
+        android:layout_width="152dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/facegooglebtn_background"
+        android:drawableStart="@drawable/google_icon"
+        android:drawablePadding="13dp"
+        android:fontFamily="@font/bentonsans_medium"
+        android:paddingStart="22dp"
+        android:paddingEnd="22dp"
+        android:text="@string/google"
+        android:textAlignment="textStart"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/textView_forgot"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/bentonsans_bold"
+        android:text="@string/or_continue_with"
+        android:textColor="#09051C"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_facebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="20dp"
+        android:autofillHints=""
+        android:background="@drawable/facegooglebtn_background"
+        android:ems="10"
+        android:fontFamily="@font/bentonsans_regular"
+        android:hint="@string/password"
+        android:inputType="textPersonName"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:textColor="#3B3B3B"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textContinue"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="325dp"
+        android:layout_height="57dp"
+        android:layout_marginBottom="12dp"
+        android:autofillHints=""
+        android:background="@drawable/facegooglebtn_background"
+        android:ems="10"
+        android:fontFamily="@font/bentonsans_regular"
+        android:hint="@string/email"
+        android:inputType="textPersonName"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:textColor="#3B3B3B"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/bentonsans_bold"
+        android:text="@string/login_to_your_account"
+        android:textColor="#09051C"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pattern" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.251"
+        app:srcCompat="@drawable/logo_food" />
+
+    <TextView
+        android:id="@+id/foodNinjaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/viga"
+        android:text="@string/foodninja"
+        android:textColor="#53E88B"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:fontFamily="@font/inter_semibold"
+        android:textSize="13sp"
+        android:textColor="#09051C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text="@string/deliever_favorite_food"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
