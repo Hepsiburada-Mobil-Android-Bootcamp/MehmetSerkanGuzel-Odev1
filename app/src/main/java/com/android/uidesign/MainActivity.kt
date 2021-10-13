@@ -1,18 +1,22 @@
 package com.android.uidesign
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.LinearGradient
 import android.graphics.Shader
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
-import androidx.appcompat.app.ActionBarDrawerToggle
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val foodNinjaText by lazy {
             findViewById<TextView>(R.id.foodNinjaText)
+        }
+        val btnLogin by lazy {
+            findViewById<View>(R.id.btn_login)
         }
         val textView2 by lazy {
             findViewById<TextView>(R.id.textView_forgot)
@@ -22,7 +26,14 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
            foodNinjaText.gradient()
            textView2.gradient()
+
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, DetailActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
    private fun TextView.gradient() {
         val width = paint.measureText(text.toString())
         val textShader: Shader = LinearGradient(
