@@ -15,9 +15,6 @@ class MainActivity : AppCompatActivity() {
         val foodNinjaText by lazy {
             findViewById<TextView>(R.id.foodNinjaText)
         }
-        val btnLogin by lazy {
-            findViewById<View>(R.id.btn_login)
-        }
         val textView2 by lazy {
             findViewById<TextView>(R.id.textView_forgot)
         }
@@ -27,10 +24,6 @@ class MainActivity : AppCompatActivity() {
            foodNinjaText.gradient()
            textView2.gradient()
 
-        btnLogin.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
 
     }
 
