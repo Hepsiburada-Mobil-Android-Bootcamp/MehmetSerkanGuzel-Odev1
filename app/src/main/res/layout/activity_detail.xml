@@ -1,354 +1,784 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
+    android:background="@drawable/gradient"
     tools:context=".DetailActivity">
 
+
+
+
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="44dp"
+            android:src="@drawable/icon_location"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineHeight="27sp"
+            android:text="@string/home"
+            android:textColor="#18172B"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/location_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/address_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/_242_st_marks_eve_finland"
+            android:textColor="#6E80B0"
+            app:layout_constraintEnd_toEndOf="@+id/home_textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/home_textView"
+            app:layout_constraintTop_toBottomOf="@+id/home_textView" />
+
+        <Button
+            android:id="@+id/selected_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/selected_btn_background"
+            android:drawableStart="@drawable/icon_fastfood"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            app:layout_constraintStart_toStartOf="@+id/location_icon"
+            app:layout_constraintTop_toBottomOf="@+id/location_icon" />
+
+        <Button
+            android:id="@+id/pizza_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/detail_btn_background"
+            android:drawableStart="@drawable/icon_pizza"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/selected_button"
+            app:layout_constraintTop_toTopOf="@+id/selected_button" />
+
+        <Button
+            android:id="@+id/beverages_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/detail_btn_background"
+            android:drawableStart="@drawable/icon_beverages"
+            android:paddingStart="19dp"
+            android:paddingEnd="19dp"
+            app:layout_constraintStart_toEndOf="@+id/pizza_button"
+            app:layout_constraintTop_toTopOf="@+id/pizza_button" />
+
+        <Button
+            android:id="@+id/asian_button"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:background="@drawable/detail_btn_background"
+            android:drawableStart="@drawable/icon_asian"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            app:layout_constraintStart_toEndOf="@+id/beverages_button"
+            app:layout_constraintTop_toTopOf="@+id/beverages_button" />
+
+        <TextView
+            android:id="@+id/selected_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="All"
+            android:textColor="#18172B"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/selected_button"
+            app:layout_constraintStart_toStartOf="@+id/selected_button"
+            app:layout_constraintTop_toBottomOf="@+id/selected_button" />
+
+        <TextView
+            android:id="@+id/pizza_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Pizza"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/pizza_button"
+            app:layout_constraintStart_toStartOf="@+id/pizza_button"
+            app:layout_constraintTop_toBottomOf="@+id/pizza_button" />
+
+        <TextView
+            android:id="@+id/beverage_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Beverages"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/beverages_button"
+            app:layout_constraintStart_toStartOf="@+id/beverages_button"
+            app:layout_constraintTop_toBottomOf="@+id/beverages_button" />
+
+        <TextView
+            android:id="@+id/asian_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Asian"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/asian_button"
+            app:layout_constraintStart_toStartOf="@+id/asian_button"
+            app:layout_constraintTop_toBottomOf="@+id/asian_button" />
+
+        <TextView
+            android:id="@+id/popular_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:lineHeight="27sp"
+            android:text="Popular Restaurents"
+            android:textColor="#18172B"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/selected_button"
+            app:layout_constraintTop_toBottomOf="@+id/selected_textView" />
+
+        <ImageView
+            android:id="@+id/option_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="113dp"
+            android:src="@drawable/ic_options_icons"
+            app:layout_constraintBottom_toBottomOf="@+id/popular_textView"
+            app:layout_constraintStart_toEndOf="@+id/popular_textView"
+            app:layout_constraintTop_toTopOf="@+id/popular_textView" />
+
+
+
+
+
+        <ImageView
+            android:id="@+id/conradFoodBackground"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="34dp"
+            android:src="@drawable/conrad_backgrounds"
+            app:layout_constraintStart_toStartOf="@+id/popular_textView"
+            app:layout_constraintTop_toBottomOf="@+id/popular_textView" />
+
+        <ImageView
+            android:id="@+id/spaceBackground"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_space_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/conradFoodBackground"
+            app:layout_constraintEnd_toEndOf="@+id/conradFoodBackground"
+            app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
+            app:layout_constraintTop_toTopOf="@+id/conradFoodBackground" />
+
+
+        <ImageView
+            android:id="@+id/contadFoodIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_conrad_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/conradFoodBackground"
+            app:layout_constraintEnd_toEndOf="@+id/conradFoodBackground"
+            app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
+            app:layout_constraintTop_toTopOf="@+id/conradFoodBackground"
+            app:layout_constraintVertical_bias="0.612" />
+
+        <TextView
+            android:id="@+id/conrad_FoodTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Conrad food"
+            android:textColor="#18172B"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/conradFoodBackground"
+            app:layout_constraintTop_toTopOf="@+id/conradFoodBackground" />
+
+        <TextView
+            android:id="@+id/sk_RestoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="SK Resto"
+            android:textColor="#18172B"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/sk_resto_background"
+            app:layout_constraintTop_toTopOf="@+id/sk_resto_background" />
+
+        <TextView
+            android:id="@+id/black_fish_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Black Fish"
+            android:textColor="#18172B"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/black_fish_background"
+            app:layout_constraintTop_toTopOf="@+id/black_fish_background" />
+
+        <TextView
+            android:id="@+id/goichi_oniko_TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Goichi Oniko"
+            android:textColor="#18172B"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/oniko_background"
+            app:layout_constraintTop_toTopOf="@+id/oniko_background" />
+
+        <ImageView
+            android:id="@+id/star_icon_conrad"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_star_icon"
+            app:layout_constraintStart_toStartOf="@+id/conrad_FoodTextView"
+            app:layout_constraintTop_toBottomOf="@+id/conrad_FoodTextView" />
+
+        <ImageView
+            android:id="@+id/star_icon_skResto"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_star_icon"
+            app:layout_constraintStart_toStartOf="@+id/sk_RestoTextView"
+            app:layout_constraintTop_toBottomOf="@+id/sk_RestoTextView" />
+
+        <ImageView
+            android:id="@+id/star_icon_blackFish"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_star_icon"
+            app:layout_constraintStart_toStartOf="@+id/black_fish_TextView"
+            app:layout_constraintTop_toBottomOf="@+id/black_fish_TextView" />
+
+        <ImageView
+            android:id="@+id/star_icon_goichiOniko"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/ic_star_icon"
+            app:layout_constraintStart_toStartOf="@+id/goichi_oniko_TextView"
+            app:layout_constraintTop_toBottomOf="@+id/goichi_oniko_TextView" />
+
+        <TextView
+            android:id="@+id/points_conrad_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="4.6"
+            android:textColor="#18172B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_icon_conrad"
+            app:layout_constraintStart_toEndOf="@+id/star_icon_conrad"
+            app:layout_constraintTop_toTopOf="@+id/star_icon_conrad" />
+
+        <TextView
+            android:id="@+id/points_skResto_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="4.4"
+            android:textColor="#18172B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_icon_skResto"
+            app:layout_constraintStart_toEndOf="@+id/star_icon_skResto"
+            app:layout_constraintTop_toTopOf="@+id/star_icon_skResto" />
+
+        <TextView
+            android:id="@+id/points_black_fish_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="4.3"
+            android:textColor="#18172B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_icon_blackFish"
+            app:layout_constraintStart_toEndOf="@+id/star_icon_blackFish"
+            app:layout_constraintTop_toTopOf="@+id/star_icon_blackFish" />
+
+        <TextView
+            android:id="@+id/points_goichi_oniko_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="4.0"
+            android:textColor="#18172B"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/star_icon_goichiOniko"
+            app:layout_constraintStart_toEndOf="@+id/star_icon_goichiOniko"
+            app:layout_constraintTop_toTopOf="@+id/star_icon_goichiOniko" />
+
+        <TextView
+            android:id="@+id/dotConradTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_conrad_textView"
+            app:layout_constraintStart_toEndOf="@+id/points_conrad_textView" />
+
+        <TextView
+            android:id="@+id/dotSkRestoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_skResto_textView"
+            app:layout_constraintStart_toEndOf="@+id/points_skResto_textView" />
+
+        <TextView
+            android:id="@+id/dotBlackFishTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_black_fish_textView"
+            app:layout_constraintStart_toEndOf="@+id/points_black_fish_textView" />
+
+        <TextView
+            android:id="@+id/dotGoichiOnikoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_goichi_oniko_textView"
+            app:layout_constraintStart_toEndOf="@+id/points_goichi_oniko_textView" />
+
+        <TextView
+            android:id="@+id/dot2ConradTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
+            app:layout_constraintStart_toEndOf="@+id/conrad_pizza_text" />
+
+        <TextView
+            android:id="@+id/dot2SkRestoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sk_resto_Chinise_text"
+            app:layout_constraintStart_toEndOf="@+id/sk_resto_Chinise_text" />
+
+        <TextView
+            android:id="@+id/dot2BlackFishTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/black_fish_seefood_text"
+            app:layout_constraintStart_toEndOf="@+id/black_fish_seefood_text" />
+
+        <TextView
+            android:id="@+id/dot2GoichiOnikoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="."
+            android:textColor="#6E80B0"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/black_goichi_fastfood_text"
+            app:layout_constraintStart_toEndOf="@+id/black_goichi_fastfood_text" />
+
+        <ImageView
+            android:id="@+id/sk_resto_background"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/sk_resto_background"
+            app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
+            app:layout_constraintTop_toBottomOf="@+id/conradFoodBackground" />
+
+        <ImageView
+            android:id="@+id/black_fish_background"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/black_fish_background"
+            app:layout_constraintStart_toStartOf="@+id/sk_resto_background"
+            app:layout_constraintTop_toBottomOf="@+id/sk_resto_background" />
+
+        <ImageView
+            android:id="@+id/oniko_background"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/oniko_background"
+            app:layout_constraintStart_toStartOf="@+id/black_fish_background"
+            app:layout_constraintTop_toBottomOf="@+id/black_fish_background" />
+
+        <TextView
+            android:id="@+id/conrad_pizza_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Pizza"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_conrad_textView"
+            app:layout_constraintStart_toEndOf="@+id/dotConradTextView"
+            app:layout_constraintTop_toTopOf="@+id/points_conrad_textView"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/sk_resto_Chinise_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Chienese"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_skResto_textView"
+            app:layout_constraintStart_toEndOf="@+id/dotSkRestoTextView"
+            app:layout_constraintTop_toTopOf="@+id/points_skResto_textView" />
+
+        <TextView
+            android:id="@+id/black_fish_seefood_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Seafood"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_black_fish_textView"
+            app:layout_constraintStart_toEndOf="@+id/dotBlackFishTextView"
+            app:layout_constraintTop_toTopOf="@+id/points_black_fish_textView" />
+
+        <TextView
+            android:id="@+id/black_goichi_fastfood_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:text="Fastfood"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/points_goichi_oniko_textView"
+            app:layout_constraintStart_toEndOf="@+id/dotGoichiOnikoTextView"
+            app:layout_constraintTop_toTopOf="@+id/points_goichi_oniko_textView" />
+
+        <ImageView
+            android:id="@+id/clock_icon_conrad"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_clock_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
+            app:layout_constraintStart_toEndOf="@+id/dot2ConradTextView"
+            app:layout_constraintTop_toTopOf="@+id/conrad_pizza_text" />
+
+        <ImageView
+            android:id="@+id/clock_icon_skResto"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_clock_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/sk_resto_Chinise_text"
+            app:layout_constraintStart_toEndOf="@+id/dot2SkRestoTextView"
+            app:layout_constraintTop_toTopOf="@+id/sk_resto_Chinise_text" />
+
+        <ImageView
+            android:id="@+id/clock_icon_blackFish"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_clock_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/black_fish_seefood_text"
+            app:layout_constraintStart_toEndOf="@+id/dot2BlackFishTextView"
+            app:layout_constraintTop_toTopOf="@+id/black_fish_seefood_text" />
+
+        <ImageView
+            android:id="@+id/clock_icon_GoichiOniko"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_clock_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/black_goichi_fastfood_text"
+            app:layout_constraintStart_toEndOf="@+id/dot2GoichiOnikoTextView"
+            app:layout_constraintTop_toTopOf="@+id/black_goichi_fastfood_text" />
+
+        <TextView
+            android:id="@+id/conrad_minutes_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="15 min"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
+            app:layout_constraintStart_toEndOf="@+id/clock_icon_conrad"
+            app:layout_constraintTop_toTopOf="@+id/conrad_pizza_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/skResto_minutes_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="30 min"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sk_resto_Chinise_text"
+            app:layout_constraintStart_toEndOf="@+id/clock_icon_skResto"
+            app:layout_constraintTop_toTopOf="@+id/sk_resto_Chinise_text"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/blackFish_minutes_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="20 min"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/black_fish_seefood_text"
+            app:layout_constraintStart_toEndOf="@+id/clock_icon_blackFish"
+            app:layout_constraintTop_toTopOf="@+id/black_fish_seefood_text" />
+
+        <TextView
+            android:id="@+id/goichiOniko_minutes_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/poppins"
+            android:lineHeight="18sp"
+            android:text="20 min"
+            android:textColor="#6E80B0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/black_goichi_fastfood_text"
+            app:layout_constraintStart_toEndOf="@+id/clock_icon_GoichiOniko"
+            app:layout_constraintTop_toTopOf="@+id/black_goichi_fastfood_text" />
+
+        <TextView
+            android:id="@+id/conrad_indirim_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="50% OFF"
+            android:textColor="#6D61F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/conrad_FoodTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/conrad_FoodTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/skResto_indirim_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="40% OFF"
+            android:textColor="#6D61F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sk_RestoTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/sk_RestoTextView" />
+
+        <TextView
+            android:id="@+id/blackFish_indirim_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="40% OFF"
+            android:textColor="#6D61F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/black_fish_TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/black_fish_TextView" />
+
+        <TextView
+            android:id="@+id/goichiOniko_indirim_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="50% OFF"
+            android:textColor="#6D61F2"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/goichi_oniko_TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/goichi_oniko_TextView" />
+
+        <ImageView
+            android:id="@+id/sk_resto_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tencere_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/sk_resto_background"
+            app:layout_constraintEnd_toEndOf="@+id/sk_resto_background"
+            app:layout_constraintStart_toStartOf="@+id/sk_resto_background"
+            app:layout_constraintTop_toTopOf="@+id/sk_resto_background" />
+
+        <ImageView
+            android:id="@+id/black_fish_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_black_fish_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/black_fish_background"
+            app:layout_constraintEnd_toEndOf="@+id/black_fish_background"
+            app:layout_constraintStart_toStartOf="@+id/black_fish_background"
+            app:layout_constraintTop_toTopOf="@+id/black_fish_background" />
+
+        <ImageView
+            android:id="@+id/oniko_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_oniko_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/oniko_background"
+            app:layout_constraintEnd_toEndOf="@+id/oniko_background"
+            app:layout_constraintStart_toStartOf="@+id/oniko_background"
+            app:layout_constraintTop_toTopOf="@+id/oniko_background" />
+
+
+
+
     <ImageView
-        android:id="@+id/location_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="44dp"
-        android:src="@drawable/icon_location"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/home_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineHeight="27sp"
-        android:text="@string/home"
-        android:textColor="#18172B"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/location_icon"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/address_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp"
-        android:fontFamily="@font/poppins"
-        android:text="@string/_242_st_marks_eve_finland"
-        android:textColor="#6E80B0"
-        app:layout_constraintEnd_toEndOf="@+id/home_textView"
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/home_textView"
-        app:layout_constraintTop_toBottomOf="@+id/home_textView" />
-
-    <Button
-        android:id="@+id/selected_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="36dp"
-        android:paddingStart="15dp"
-        android:paddingEnd="15dp"
-        android:background="@drawable/selected_btn_background"
-        android:drawableStart="@drawable/icon_fastfood"
-        app:layout_constraintStart_toStartOf="@+id/location_icon"
-        app:layout_constraintTop_toBottomOf="@+id/location_icon" />
-
-    <Button
-        android:id="@+id/pizza_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:background="@drawable/detail_btn_background"
-        android:drawableStart="@drawable/icon_pizza"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        app:layout_constraintStart_toEndOf="@+id/selected_button"
-        app:layout_constraintTop_toTopOf="@+id/selected_button" />
-
-    <Button
-        android:id="@+id/beverages_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:background="@drawable/detail_btn_background"
-        android:drawableStart="@drawable/icon_beverages"
-        android:paddingStart="19dp"
-        android:paddingEnd="19dp"
-        app:layout_constraintStart_toEndOf="@+id/pizza_button"
-        app:layout_constraintTop_toTopOf="@+id/pizza_button" />
-
-    <Button
-        android:id="@+id/asian_button"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="28dp"
-        android:background="@drawable/detail_btn_background"
-        android:drawableStart="@drawable/icon_asian"
-        android:paddingStart="18dp"
-        android:paddingEnd="18dp"
-        app:layout_constraintStart_toEndOf="@+id/beverages_button"
-        app:layout_constraintTop_toTopOf="@+id/beverages_button" />
-
-    <TextView
-        android:id="@+id/selected_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="All"
-        android:textColor="#18172B"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/selected_button"
-        app:layout_constraintStart_toStartOf="@+id/selected_button"
-        app:layout_constraintTop_toBottomOf="@+id/selected_button" />
-
-    <TextView
-        android:id="@+id/pizza_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Pizza"
-        android:textColor="#6E80B0"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/pizza_button"
-        app:layout_constraintStart_toStartOf="@+id/pizza_button"
-        app:layout_constraintTop_toBottomOf="@+id/pizza_button" />
-
-    <TextView
-        android:id="@+id/beverage_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Beverages"
-        android:textColor="#6E80B0"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/beverages_button"
-        app:layout_constraintStart_toStartOf="@+id/beverages_button"
-        app:layout_constraintTop_toBottomOf="@+id/beverages_button" />
-
-    <TextView
-        android:id="@+id/asian_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Asian"
-        android:textColor="#6E80B0"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="@+id/asian_button"
-        app:layout_constraintStart_toStartOf="@+id/asian_button"
-        app:layout_constraintTop_toBottomOf="@+id/asian_button" />
-
-    <TextView
-        android:id="@+id/popular_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:lineHeight="27sp"
-        android:text="Popular Restaurents"
-        android:textColor="#18172B"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/selected_button"
-        app:layout_constraintTop_toBottomOf="@+id/selected_textView" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/bottom_background" />
 
     <ImageView
-        android:id="@+id/option_icon"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="113dp"
-        android:src="@drawable/ic_options_icons"
-        app:layout_constraintBottom_toBottomOf="@+id/popular_textView"
-        app:layout_constraintStart_toEndOf="@+id/popular_textView"
-        app:layout_constraintTop_toTopOf="@+id/popular_textView" />
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_user_icon" />
 
     <ImageView
-        android:id="@+id/conradFoodBackground"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="34dp"
-        android:src="@drawable/conrad_backgrounds"
-        app:layout_constraintStart_toStartOf="@+id/popular_textView"
-        app:layout_constraintTop_toBottomOf="@+id/popular_textView" />
-
-    <ImageView
-        android:id="@+id/spaceBackground"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:src="@drawable/ic_space_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/conradFoodBackground"
-        app:layout_constraintEnd_toEndOf="@+id/conradFoodBackground"
-        app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
-        app:layout_constraintTop_toTopOf="@+id/conradFoodBackground" />
-
-
-    <ImageView
-        android:id="@+id/contadFoodIcon"
+        android:id="@+id/imageView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_conrad_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/conradFoodBackground"
-        app:layout_constraintEnd_toEndOf="@+id/conradFoodBackground"
-        app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
-        app:layout_constraintTop_toTopOf="@+id/conradFoodBackground"
-        app:layout_constraintVertical_bias="0.612" />
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_shop_icon" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/ic_icon_search" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="104dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:srcCompat="@drawable/home_icon_background" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/imageView7"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:srcCompat="@drawable/ic_home_icon" />
 
     <TextView
-        android:id="@+id/conrad_FoodTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Conrad food"
-        android:textColor="#18172B"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/conradFoodBackground"
-        app:layout_constraintTop_toTopOf="@+id/conradFoodBackground" />
-
-    <TextView
-        android:id="@+id/sk_RestoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="SK Resto"
-        android:textColor="#18172B"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/sk_resto_background"
-        app:layout_constraintTop_toTopOf="@+id/sk_resto_background" />
-
-    <ImageView
-        android:id="@+id/star_icon_conrad"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginTop="14dp"
-        android:src="@drawable/ic_star_icon"
-        app:layout_constraintStart_toStartOf="@+id/conrad_FoodTextView"
-        app:layout_constraintTop_toBottomOf="@+id/conrad_FoodTextView" />
-
-    <ImageView
-        android:id="@+id/star_icon_skResto"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginTop="14dp"
-        android:src="@drawable/ic_star_icon"
-        app:layout_constraintStart_toStartOf="@+id/sk_RestoTextView"
-        app:layout_constraintTop_toBottomOf="@+id/sk_RestoTextView" />
-
-    <TextView
-        android:id="@+id/points_conrad_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="1dp"
-        android:fontFamily="@font/poppins_medium"
-        android:text="4.6"
-        android:textColor="#18172B"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/star_icon_conrad"
-        app:layout_constraintStart_toEndOf="@+id/star_icon_conrad"
-        app:layout_constraintTop_toTopOf="@+id/star_icon_conrad" />
-
-    <TextView
-        android:id="@+id/dotConradTextView"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="."
-        android:textColor="#6E80B0"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/points_conrad_textView"
-        app:layout_constraintStart_toEndOf="@+id/points_conrad_textView" />
-
-    <TextView
-        android:id="@+id/dot2ConradTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="."
-        android:textColor="#6E80B0"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
-        app:layout_constraintStart_toEndOf="@+id/conrad_pizza_text" />
-
-    <ImageView
-        android:id="@+id/sk_resto_background"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/sk_resto_background"
-        app:layout_constraintStart_toStartOf="@+id/conradFoodBackground"
-        app:layout_constraintTop_toBottomOf="@+id/conradFoodBackground" />
-
-    <TextView
-        android:id="@+id/conrad_pizza_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins"
-        android:text="Pizza"
-        android:textColor="#6E80B0"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/points_conrad_textView"
-        app:layout_constraintStart_toEndOf="@+id/dotConradTextView"
-        app:layout_constraintTop_toTopOf="@+id/points_conrad_textView"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <ImageView
-        android:id="@+id/clock_icon_conrad"
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:layout_marginStart="8dp"
-        android:src="@drawable/ic_clock_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
-        app:layout_constraintStart_toEndOf="@+id/dot2ConradTextView"
-        app:layout_constraintTop_toTopOf="@+id/conrad_pizza_text" />
-
-    <TextView
-        android:id="@+id/conrad_minutes_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:fontFamily="@font/poppins"
-        android:lineHeight="18sp"
-        android:text="15 min"
-        android:textColor="#6E80B0"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/conrad_pizza_text"
-        app:layout_constraintStart_toEndOf="@+id/clock_icon_conrad"
-        app:layout_constraintTop_toTopOf="@+id/conrad_pizza_text"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/conrad_indirim_textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="50% OFF"
+        android:text="Home"
         android:textColor="#6D61F2"
         android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/conrad_FoodTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/conrad_FoodTextView"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/sk_resto_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_tencere_icon"
-        app:layout_constraintBottom_toBottomOf="@+id/sk_resto_background"
-        app:layout_constraintEnd_toEndOf="@+id/sk_resto_background"
-        app:layout_constraintStart_toStartOf="@+id/sk_resto_background"
-        app:layout_constraintTop_toTopOf="@+id/sk_resto_background" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/imageView8"
+        app:layout_constraintTop_toTopOf="@+id/imageView7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
